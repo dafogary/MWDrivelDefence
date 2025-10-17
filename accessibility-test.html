@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MW Drivel Defence - Accessibility Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        .test-section {
+            background-color: #f5f5f5;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        
+        button {
+            background-color: #007cba;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px 5px;
+        }
+        
+        button:hover {
+            background-color: #005a87;
+        }
+        
+        textarea {
+            width: 100%;
+            min-height: 200px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            font-family: Arial, sans-serif;
+            margin: 10px 0;
+        }
+        
+        #results {
+            background-color: white;
+            padding: 20px;
+            margin: 20px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            min-height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>MW Drivel Defence - WCAG 2.2 AA Accessibility Test</h1>
+    
+    <div class="test-section">
+        <h2>Test the New Accessibility Features</h2>
+        <p>Enter some text below to test the comprehensive WCAG 2.2 AA accessibility analysis features that have been added to MW Drivel Defence:</p>
+        
+        <textarea id="testText" placeholder="Enter text for accessibility analysis...">
+This is a very long sentence that contains more than twenty words and might be considered difficult to read by some users, particularly those with dyslexia or other reading difficulties. Additionally, we need to utilise sophisticated terminology and complex linguistic constructions to demonstrate the functionality of our accessibility analysis algorithms. The implementation of comprehensive WCAG compliance verification necessitates thorough examination of multiple accessibility parameters including readability metrics, dyslexia-friendly design principles, and screen reader compatibility assessments.
+
+Furthermore, this paragraph demonstrates how the system can identify potential accessibility issues in content structure and presentation methodologies.
+        </textarea>
+        
+        <button onclick="testAccessibility()">Analyze Accessibility</button>
+        <button onclick="testColorContrast()">Test Color Contrast</button>
+        <button onclick="clearResults()">Clear Results</button>
+    </div>
+    
+    <div id="results">
+        <p><em>Results will appear here after analysis...</em></p>
+    </div>
+
+    <!-- Include the shared JavaScript library -->
+    <script src="MWDrivelDefenceshared.js"></script>
+    
+    <script>
+        function testAccessibility() {
+            var text = document.getElementById('testText').value;
+            if (!text.trim()) {
+                alert('Please enter some text to analyze.');
+                return;
+            }
+            
+            // Perform WCAG analysis
+            var wcagResults = performWCAGAnalysis(text, document.documentElement.innerHTML);
+            
+            // Generate the accessibility report
+            var report = generateAccessibilityReport(wcagResults);
+            
+            // Display results
+            document.getElementById('results').innerHTML = report;
+        }
+        
+        function testColorContrast() {
+            var results = document.getElementById('results');
+            results.innerHTML = `
+                <h3>🎨 Color Contrast Checker</h3>
+                <p>Test different color combinations for WCAG compliance:</p>
+                <div style='background-color: #f5f5f5; padding: 15px; margin: 10px 0; border-radius: 5px;'>
+                    <label for='fgColor'>Text Color (hex): </label>
+                    <input type='text' id='fgColor' value='#000000' style='margin: 5px;' />
+                    <label for='bgColor'>Background Color (hex): </label>
+                    <input type='text' id='bgColor' value='#ffffff' style='margin: 5px;' />
+                    <button onclick='checkContrastRatio()' style='margin: 5px; padding: 5px 10px;'>Check Contrast</button>
+                    <div id='contrastResults' style='margin-top: 10px; padding: 10px; background-color: white; border-radius: 3px; border: 1px solid #ddd;'></div>
+                </div>
+                
+                <h4>Common Color Combinations to Test:</h4>
+                <ul>
+                    <li><button onclick="testCommonColors('#000000', '#ffffff')">Black on White</button></li>
+                    <li><button onclick="testCommonColors('#ffffff', '#000000')">White on Black</button></li>
+                    <li><button onclick="testCommonColors('#0066cc', '#ffffff')">Blue on White</button></li>
+                    <li><button onclick="testCommonColors('#666666', '#ffffff')">Gray on White</button></li>
+                    <li><button onclick="testCommonColors('#ff0000', '#ffffff')">Red on White</button></li>
+                </ul>
+            `;
+        }
+        
+        function checkContrastRatio() {
+            var fg = document.getElementById('fgColor').value;
+            var bg = document.getElementById('bgColor').value;
+            var result = checkColorContrast(fg, bg);
+            var resultsDiv = document.getElementById('contrastResults');
+            
+            var color = result.wcagAA ? '#4CAF50' : '#F44336';
+            resultsDiv.innerHTML = '<strong style="color: ' + color + '">Contrast Ratio: ' + result.ratio + ':1</strong><br>' + result.recommendation;
+        }
+        
+        function testCommonColors(fg, bg) {
+            document.getElementById('fgColor').value = fg;
+            document.getElementById('bgColor').value = bg;
+            checkContrastRatio();
+        }
+        
+        function clearResults() {
+            document.getElementById('results').innerHTML = '<p><em>Results will appear here after analysis...</em></p>';
+        }
+        
+        // Initialize with a sample analysis
+        window.onload = function() {
+            setTimeout(function() {
+                document.getElementById('results').innerHTML = `
+                    <h3>✨ Welcome to MW Drivel Defence Accessibility Testing</h3>
+                    <p>This extension now includes comprehensive WCAG 2.2 AA accessibility analysis features:</p>
+                    <ul>
+                        <li><strong>📖 Reading Level Analysis:</strong> Flesch-Kincaid Grade Level, Flesch Reading Ease, Gunning Fog Index</li>
+                        <li><strong>🧠 Dyslexia-Friendly Analysis:</strong> Paragraph length, sentence complexity, word complexity</li>
+                        <li><strong>🔊 Screen Reader Compatibility:</strong> Alt text, heading structure, form labels, table headers</li>
+                        <li><strong>🎨 Color Contrast Checking:</strong> WCAG AA/AAA compliance verification</li>
+                        <li><strong>📊 Overall WCAG Score:</strong> Comprehensive compliance rating</li>
+                    </ul>
+                    <p><strong>Click "Analyze Accessibility" to test with the sample text, or "Test Color Contrast" to check color combinations.</strong></p>
+                `;
+            }, 1000);
+        };
+    </script>
+</body>
+</html>

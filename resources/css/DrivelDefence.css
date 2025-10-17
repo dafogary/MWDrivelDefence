@@ -1,0 +1,423 @@
+/* DrivelDefence MediaWiki Extension Styles */
+
+.driveldefence-container {
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 20px;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+	line-height: 1.6;
+}
+
+.driveldefence-title {
+	font-size: 2.2em;
+	color: #334d55;
+	margin-bottom: 20px;
+	text-align: center;
+	font-weight: bold;
+}
+
+.driveldefence-form {
+	background: #f8f9fa;
+	padding: 25px;
+	border-radius: 8px;
+	border: 1px solid #e1e5e9;
+	margin-bottom: 20px;
+}
+
+.driveldefence-label {
+	display: block;
+	font-weight: bold;
+	margin-bottom: 8px;
+	color: #333;
+}
+
+.driveldefence-textarea {
+	width: 100%;
+	min-height: 200px;
+	padding: 12px;
+	border: 2px solid #ddd;
+	border-radius: 4px;
+	font-family: 'Courier New', monospace;
+	font-size: 14px;
+	line-height: 1.4;
+	resize: vertical;
+	box-sizing: border-box;
+}
+
+.driveldefence-textarea:focus {
+	border-color: #006699;
+	outline: none;
+	box-shadow: 0 0 0 2px rgba(0, 102, 153, 0.2);
+}
+
+.driveldefence-options {
+	margin: 20px 0;
+	padding: 15px;
+	background: #ffffff;
+	border-radius: 6px;
+	border: 1px solid #e1e5e9;
+}
+
+.driveldefence-options h3 {
+	margin-top: 0;
+	margin-bottom: 15px;
+	color: #003366;
+	font-size: 1.2em;
+}
+
+.driveldefence-fieldset {
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	margin: 15px 0;
+	padding: 10px 15px;
+}
+
+.driveldefence-fieldset legend {
+	font-weight: bold;
+	padding: 0 10px;
+	color: #333;
+}
+
+.driveldefence-options input[type="radio"],
+.driveldefence-options input[type="checkbox"] {
+	margin-right: 8px;
+	margin-bottom: 5px;
+}
+
+.driveldefence-options label {
+	display: inline;
+	font-weight: normal;
+	margin-right: 20px;
+	cursor: pointer;
+}
+
+.driveldefence-buttons {
+	text-align: center;
+	margin-top: 20px;
+}
+
+.driveldefence-button {
+	padding: 12px 24px;
+	margin: 0 10px;
+	border: none;
+	border-radius: 4px;
+	font-size: 16px;
+	font-weight: bold;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+.driveldefence-button-primary {
+	background-color: #006699;
+	color: white;
+}
+
+.driveldefence-button-primary:hover {
+	background-color: #004d73;
+}
+
+.driveldefence-button-secondary {
+	background-color: #6c757d;
+	color: white;
+}
+
+.driveldefence-button-secondary:hover {
+	background-color: #545b62;
+}
+
+.driveldefence-results {
+	background: #fff;
+	border: 1px solid #e1e5e9;
+	border-radius: 8px;
+	padding: 20px;
+	margin-top: 20px;
+	display: none;
+}
+
+.driveldefence-results.show {
+	display: block;
+}
+
+.driveldefence-results h2 {
+	color: #003366;
+	margin-top: 0;
+	border-bottom: 2px solid #e1e5e9;
+	padding-bottom: 10px;
+}
+
+.driveldefence-results h3 {
+	color: #334d55;
+	margin-top: 25px;
+	margin-bottom: 15px;
+}
+
+.driveldefence-summary {
+	background: #f8f9fa;
+	padding: 15px;
+	border-radius: 4px;
+	margin-bottom: 20px;
+}
+
+.driveldefence-summary ul {
+	margin: 0;
+	padding-left: 20px;
+}
+
+.driveldefence-summary li {
+	margin-bottom: 5px;
+}
+
+.driveldefence-sentence {
+	margin-bottom: 15px;
+	padding: 10px;
+	background: #f8f9fa;
+	border-left: 4px solid #006699;
+	border-radius: 0 4px 4px 0;
+}
+
+.driveldefence-word-count {
+	color: #6f42c1;
+	font-style: italic;
+	font-weight: bold;
+	margin-right: 10px;
+}
+
+.driveldefence-alternative {
+	background-color: #dc3545;
+	color: white;
+	padding: 2px 4px;
+	border-radius: 3px;
+	font-weight: bold;
+	cursor: help;
+}
+
+.driveldefence-alternative:hover {
+	background-color: #c82333;
+}
+
+.driveldefence-footer {
+	margin-top: 30px;
+	padding-top: 20px;
+	border-top: 1px solid #e1e5e9;
+	text-align: center;
+}
+
+.driveldefence-copyright {
+	color: #666;
+	font-size: 12px;
+	margin: 0;
+}
+
+.driveldefence-copyright a {
+	color: #006699;
+	text-decoration: none;
+}
+
+.driveldefence-copyright a:hover {
+	color: #ff9900;
+	text-decoration: underline;
+}
+
+/* Inline checker styles */
+.driveldefence-inline {
+	border: 1px solid #e1e5e9;
+	border-radius: 4px;
+	padding: 15px;
+	margin: 10px 0;
+	background: #f8f9fa;
+}
+
+.driveldefence-inline-text {
+	padding: 10px;
+	background: white;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	margin-bottom: 10px;
+	font-family: 'Courier New', monospace;
+	font-size: 14px;
+}
+
+.driveldefence-inline-check {
+	background-color: #006699;
+	color: white;
+	border: none;
+	padding: 8px 16px;
+	border-radius: 4px;
+	cursor: pointer;
+	font-size: 14px;
+}
+
+.driveldefence-inline-check:hover {
+	background-color: #004d73;
+}
+
+.driveldefence-inline-results {
+	margin-top: 15px;
+	padding: 15px;
+	background: white;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+}
+
+.driveldefence-inline-empty {
+	color: #dc3545;
+	font-style: italic;
+	padding: 10px;
+	border: 1px solid #f5c6cb;
+	background: #f8d7da;
+	border-radius: 4px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+	.driveldefence-container {
+		padding: 10px;
+	}
+	
+	.driveldefence-form {
+		padding: 15px;
+	}
+	
+	.driveldefence-textarea {
+		min-height: 150px;
+	}
+	
+	.driveldefence-button {
+		display: block;
+		width: 100%;
+		margin: 5px 0;
+	}
+	
+	.driveldefence-buttons {
+		text-align: stretch;
+	}
+}
+
+/* Accessibility Enhancements */
+.mwdriveldefence-accessibility-score {
+	font-size: 1.2em;
+	font-weight: bold;
+	margin: 15px 0;
+	padding: 10px;
+	border-radius: 5px;
+}
+
+.mwdriveldefence-wcag-pass {
+	background-color: #d4edda;
+	color: #155724;
+	border: 1px solid #c3e6cb;
+}
+
+.mwdriveldefence-wcag-warn {
+	background-color: #fff3cd;
+	color: #856404;
+	border: 1px solid #ffeaa7;
+}
+
+.mwdriveldefence-wcag-fail {
+	background-color: #f8d7da;
+	color: #721c24;
+	border: 1px solid #f1b0b7;
+}
+
+.mwdriveldefence-contrast-checker {
+	background-color: #f9f9f9;
+	padding: 15px;
+	margin: 15px 0;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+}
+
+.mwdriveldefence-contrast-checker input {
+	padding: 8px;
+	margin: 5px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	font-size: 14px;
+	width: 120px;
+}
+
+.mwdriveldefence-contrast-checker button {
+	background-color: #007cba;
+	color: white;
+	padding: 8px 15px;
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+	font-size: 14px;
+	margin: 5px;
+}
+
+.mwdriveldefence-contrast-checker button:hover {
+	background-color: #005a87;
+}
+
+.mwdriveldefence-contrast-checker button:focus {
+	outline: 2px solid #007cba;
+	outline-offset: 2px;
+}
+
+.mwdriveldefence-contrast-results {
+	margin-top: 10px;
+	padding: 10px;
+	background-color: white;
+	border-radius: 3px;
+	border: 1px solid #ddd;
+}
+
+.mwdriveldefence-accessibility-report h3 {
+	color: #0066cc;
+	margin-top: 1.5em;
+	margin-bottom: 0.5em;
+}
+
+.mwdriveldefence-accessibility-report h4 {
+	color: #006699;
+	margin-top: 1.2em;
+	margin-bottom: 0.4em;
+}
+
+.mwdriveldefence-reading-level {
+	background-color: #e7f3ff;
+	padding: 10px;
+	margin: 10px 0;
+	border-left: 4px solid #007cba;
+}
+
+.mwdriveldefence-dyslexia-analysis {
+	background-color: #f0f8f0;
+	padding: 10px;
+	margin: 10px 0;
+	border-left: 4px solid #28a745;
+}
+
+.mwdriveldefence-screen-reader-analysis {
+	background-color: #fff8e1;
+	padding: 10px;
+	margin: 10px 0;
+	border-left: 4px solid #ff9800;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+	.mwdriveldefence-container {
+		border: 2px solid;
+	}
+	
+	.mwdriveldefence-button {
+		border: 2px solid;
+	}
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+	.mwdriveldefence-results {
+		transition: none;
+	}
+	
+	* {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+	}
+}

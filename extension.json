@@ -1,0 +1,77 @@
+{
+	"name": "MWDrivelDefence",
+	"version": "0.0.1",
+	"author": [
+        "Gary Foster - DAFO Creative Ltd"
+	],
+	"url": "https://github.com/dafogary/MWDrivelDefence",
+	"descriptionmsg": "mwdriveldefence-desc",
+	"license-name": "GNU Affero General Public License v3.0 or later",
+	"type": "specialpage",
+	"requires": {
+		"MediaWiki": ">= 1.43"
+	},
+	"MessagesDirs": {
+	       "MWDrivelDefence": [
+		       "i18n"
+	       ]
+	},
+	"ExtensionMessagesFiles": {
+		"MWDrivelDefenceAlias": "MWDrivelDefence.alias.php"
+	},
+	"AutoloadNamespaces": {
+		"MediaWiki\\Extension\\MWDrivelDefence\\": "includes/"
+	},
+	"SpecialPages": {
+		"MWDrivelDefence": "MediaWiki\\Extension\\MWDrivelDefence\\SpecialMWDrivelDefence"
+	},
+	"ParserFunctions": {
+		"drivelcheck": "MediaWiki\\Extension\\MWDrivelDefence\\MWDrivelDefenceHooks::renderDrivelCheck"
+	},
+	"ResourceModules": {
+		"ext.mwdriveldefence": {
+			"scripts": [
+				   "resources/js/MWDrivelDefenceshared.js",
+				   "resources/js/MWDrivelDefence.js"
+			],
+			"styles": [
+				   "resources/css/MWDrivelDefence.css"
+			],
+			"messages": [
+				   "mwdriveldefence-analyze-button",
+				   "mwdriveldefence-reset-button",
+				   "mwdriveldefence-enter-text",
+				   "mwdriveldefence-no-text-error",
+				   "mwdriveldefence-talk-topic-title",
+				   "mwdriveldefence-talk-analysis-summary",
+				   "mwdriveldefence-talk-analysis-details"
+			]
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "",
+		"remoteExtPath": "MWDrivelDefence"
+	},
+	"Hooks": {
+		"PageContentSaveComplete": "MediaWiki\\Extension\\MWDrivelDefence\\MWDrivelDefenceHooks::onPageContentSaveComplete"
+	},
+	"config": {
+		"MWDrivelDefenceAutoAnalyze": {
+			"value": false,
+			"description": "Automatically analyze pages when saved and post results to talk page"
+		},
+		"MWDrivelDefenceNamespaces": {
+			"value": [0, 4],
+			"description": "Namespaces to analyze (0=Main, 4=Project)"
+		},
+		"MWDrivelDefenceMinWords": {
+			"value": 50,
+			"description": "Minimum word count to trigger analysis"
+		},
+		"MWDrivelDefenceMaxSentenceLength": {
+			"value": 25,
+			"description": "Maximum recommended sentence length"
+		}
+	},
+	"manifest_version": 2
+}

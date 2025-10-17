@@ -1,0 +1,50 @@
+{
+  "name": "driveldefence-mediawiki-extension",
+  "version": "1.0.0",
+  "description": "MediaWiki extension for plain English text analysis based on Plain English Campaign guidance",
+  "main": "extension.json",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint resources/js/",
+    "lint:fix": "eslint resources/js/ --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dafogary/MWDrivelDefence.git"
+  },
+  "keywords": [
+    "mediawiki",
+    "extension",
+    "plain-english",
+    "text-analysis",
+    "accessibility",
+    "readability"
+  ],
+  "author": {
+    "name": "J C Rugg",
+    "year": "2006"
+  },
+  "contributors": [
+    {
+      "name": "Plain English Campaign",
+      "url": "https://www.plainenglish.co.uk/"
+    }
+  ],
+  "license": "GPL-2.0-or-later",
+  "bugs": {
+    "url": "https://github.com/yourusername/DrivelDefence/issues"
+  },
+  "homepage": "https://github.com/yourusername/DrivelDefence#readme",
+  "devDependencies": {
+    "eslint": "^8.0.0"
+  },
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "IE 11"
+  ]
+}
