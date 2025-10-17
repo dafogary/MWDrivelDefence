@@ -332,4 +332,4 @@ For support and bug reports, please use the GitHub issues page.
 
 - Original DrivelDefence application by J C Rugg (2006)
 - A to Z of Alternative Words by Plain English Campaign (2001)
-- MediaWiki extension adaptation (2025)
+- MediaWiki extension adaptation by DAFO Creative Ltd (2025)
