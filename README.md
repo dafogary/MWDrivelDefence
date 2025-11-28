@@ -314,6 +314,16 @@ The extension includes a comprehensive database of words and their plain English
 - Word database: © 2001 Plain English Campaign
 - Original application: © 2006 J C Rugg
 
+## Recent Changes
+### November 2025
+#### Improved Batch Analysis for Template-Based Content
+- The batch analysis script (`analyzePagesForPlainEnglish.php`) now analyzes both visible prose and content stored in template parameters (such as those used with Page Forms).
+- Template parameter values are extracted and included in the word count, sentence analysis, and all accessibility checks.
+- This ensures that pages using templates for their main content are fully analyzed for plain English and accessibility compliance.
+- Debug output lines (showing raw, stripped, and template content) have been removed now that the script is stable.
+- No changes are required to your templates or forms—analysis is automatic for all configured namespaces.
+
+
 ## Contributing
 
 Contributions are welcome! Please:
